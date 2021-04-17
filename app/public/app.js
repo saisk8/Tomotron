@@ -15,6 +15,7 @@ $(document).ready(function () {
     $('#bminus').prop('disabled', true);
     $('#sminus').prop('disabled', true);
     $('#splus').prop('disabled', true);
+    $('#reset').prop('disabled', true);
 
     function playSound() {
       var audio = new Audio('alarm.mp3');
@@ -51,12 +52,12 @@ $(document).ready(function () {
   }
 
   function pauseClock() {
-    console.log(diff);
     clearInterval(id);
     $('#bplus').prop('disabled', false);
     $('#bminus').prop('disabled', false);
     $('#sminus').prop('disabled', false);
     $('#splus').prop('disabled', false);
+    $('#reset').prop('disabled', false);
   }
 
   $('#bplus').click(function () {
